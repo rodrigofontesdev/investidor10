@@ -53,7 +53,7 @@ Criação de custom hooks para separar a camada lógica do JSX, além de contar 
 
 A escolha do React Query para trabalhar com comunicação assincrona se deve aos benefícios que ele oferece, como gerenciamento de dados simplificado, cache das requisições e poder atuar com interface otimista.
 
-Por fim, atuei com o padrão `app router` para construção de rotas dinâmicas. Como sugestão seria interessante aplicar testes end-to-end com ferramentas como Playwright ou Cypress para garantir a consistência das telas e poder realizar testes de acessibilidade. Além, melhorar o SEO das páginas.
+Por fim, atuei com o padrão `app router` para construção de rotas dinâmicas. Pensando no aperfeiçoamento do projeto, pode ser interessante aplicar testes end-to-end com ferramentas como Playwright ou Cypress para garantir a consistência das telas e poder realizar testes de acessibilidade. Além, melhorar o SEO das páginas.
 
 ## Construído com
 
