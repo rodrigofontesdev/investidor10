@@ -2,30 +2,50 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 type PostProps = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   imageUrl: any
   title: string
   slug: string
+  shortDescription: string
   category: string
+  imageWidth?: number
+  imageHeight?: number
+  imagePriority?: boolean
 }
 
-export function Post({ imageUrl, title, slug, category }: PostProps) {
+export function Post({
+  imageUrl,
+  imageWidth,
+  imageHeight,
+  title,
+  slug,
+  shortDescription,
+  category,
+  imagePriority,
+}: PostProps) {
   return (
-    <div>
-      <Image src={imageUrl} alt={title} width={1280} height={853} className="rounded-xl" />
+    <div className="flex flex-col h-full justify-between items-start">
+      <div>
+        <Image
+          src={imageUrl}
+          alt={title}
+          width={imageWidth}
+          height={imageHeight}
+          priority={imagePriority}
+          className="rounded-xl"
+        />
 
-      <span className="text-emerald-500 text-xs font-bold">{category}</span>
+        <span className="text-emerald-500 text-xs font-bold">{category}</span>
 
-      <Link
-        href={slug}
-        className="font-bold text-lg leading-normal hover:text-emerald-500 transition-colors"
-      >
-        <h3 className="mb-2 lg:mb-0">{title}</h3>
-      </Link>
+        <Link
+          href={slug}
+          className="font-bold leading-normal hover:text-emerald-500 transition-colors"
+        >
+          <h3 className="mb-2">{title}</h3>
+        </Link>
 
-      <p className="text-xs leading-normal">
-        Vero voluptatibus tempora odio quisquam alias rem non optio provident maiores quas sunt
-        reprehenderit, nemo voluptas facere. Necessitatibus autem nulla minus deleniti...
-      </p>
+        <p className="text-xs leading-normal">{shortDescription}</p>
+      </div>
 
       <Link
         href={slug}

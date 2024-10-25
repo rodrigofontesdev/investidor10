@@ -2,10 +2,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 type FeaturedPostProps = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   imageUrl: any
   title: string
   slug: string
   category: string
+  imageWidth?: number
+  imageHeight?: number
   imagePriority?: boolean
 }
 
@@ -14,6 +17,8 @@ export function FeaturedPost({
   title,
   slug,
   category,
+  imageWidth,
+  imageHeight,
   imagePriority,
 }: FeaturedPostProps) {
   return (
@@ -23,8 +28,8 @@ export function FeaturedPost({
           className="rounded-xl group-hover:scale-110 transition-all duration-500"
           src={imageUrl}
           alt={title}
-          width={1280}
-          height={853}
+          width={imageWidth}
+          height={imageHeight}
           priority={imagePriority}
         />
 
@@ -33,7 +38,7 @@ export function FeaturedPost({
             {category}
           </span>
 
-          <h2 className="font-bold text-white hover:text-emerald-100 text-xl sm:text-2xl mt-2 transition-colors">
+          <h2 className="font-bold hover:text-emerald-500 text-base sm:text-2xl mt-2 transition-colors">
             {title}
           </h2>
         </div>

@@ -35,13 +35,10 @@ export function Header() {
                 text="Economia"
                 isActive={route === '/noticias/categoria/economia'}
               />
+              <MainMenu.NavigationLink href="/noticias/categoria/mercados" text="Mercados" />
               <MainMenu.NavigationLink
                 href="/noticias/categoria/internacional"
                 text="Internacional"
-              />
-              <MainMenu.NavigationLink
-                href="/noticias/categoria/criptomoedas"
-                text="Criptomoedas"
               />
             </MainMenu.Navigation>
           </MainMenu.Navigator>

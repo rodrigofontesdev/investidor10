@@ -3,10 +3,16 @@ import Link from 'next/link'
 type PostWithoutImageProps = {
   title: string
   slug: string
+  shortDescription: string
   category: string
 }
 
-export function PostWithoutImage({ title, slug, category }: PostWithoutImageProps) {
+export function PostWithoutImage({
+  title,
+  slug,
+  shortDescription,
+  category,
+}: PostWithoutImageProps) {
   return (
     <>
       <span className="text-emerald-500 text-xs font-bold">{category}</span>
@@ -18,10 +24,7 @@ export function PostWithoutImage({ title, slug, category }: PostWithoutImageProp
         <h2 className="mb-2 lg:mb-0">{title}</h2>
       </Link>
 
-      <p className="text-xs leading-normal">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro veritatis, iusto quas
-        accusantium a nostrum in obcaecati eius fugit id, voluptatum distinctio...
-      </p>
+      <p className="text-xs leading-normal">{shortDescription}</p>
 
       <Link
         href={slug}
