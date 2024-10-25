@@ -1,5 +1,8 @@
+import { Header } from '@/components/Header'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
+import ReactQueryProvider from '../providers/ReactQueryProvider'
+
 import './globals.css'
 
 const montserrat = Montserrat({
@@ -22,7 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={montserrat.className}>
-      <body>{children}</body>
+      <body>
+        <ReactQueryProvider>
+          <Header />
+
+          <main className="px-5">{children}</main>
+        </ReactQueryProvider>
+      </body>
     </html>
   )
 }
