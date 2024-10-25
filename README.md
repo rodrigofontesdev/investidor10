@@ -51,7 +51,7 @@ Para a paginação foi escolhido o conceito de "infinite scroll", o hook `useInf
 
 Criei alguns custom hooks para separar a camada de lógica do JSX, outro benefício da abordagem é o reaproveitamento de código.
 
-A escolha do React Query para trabalhar com comunicação assincrona se deve aos benefícios que ele oferece, como gerenciamento de dados simplificado, cache das requisições e poder trabalhar com interfaces optimisticas.
+A escolha do React Query para trabalhar com comunicação assincrona se deve aos benefícios que ele oferece, como gerenciamento de dados simplificado, cache das requisições e poder trabalhar com interfaces otimista.
 
 ## Construído com
 
