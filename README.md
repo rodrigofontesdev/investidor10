@@ -45,13 +45,15 @@ npm run dev
 
 ## Considerações
 
-Para a construção de alguns componentes foi utilizado o padrão **Compound Pattern**, ideal para componentes que são dependentes de outros e muitas das vezes compartilhan informações entre si. Exemplos, componente de menu, campo de formulário, etc.
+Para construção de alguns componentes utilizei o padrão **Compound Component Pattern**, ideal para componentes que são dependentes de outros e muitas das vezes compartilhan informações entre si.
 
-Para a paginação foi escolhido o conceito de "infinite scroll", o hook `useInfiniteQuery()` do React Query permite manipular os dados e parametros da página de maneira simples.
+Na paginação procurei atuar com o conceito de "infinite scroll", o hook `useInfiniteQuery()` do React Query permite manipular os dados e parâmetros da paginação de maneira simples.
 
-Criei alguns custom hooks para separar a camada de lógica do JSX, outro benefício da abordagem é o reaproveitamento de código.
+Criei custom hooks para separar a camada lógica do JSX, além de contar com o benefício de reaproveitamento do código.
 
-A escolha do React Query para trabalhar com comunicação assincrona se deve aos benefícios que ele oferece, como gerenciamento de dados simplificado, cache das requisições e poder trabalhar com interfaces otimista.
+A escolha do React Query para trabalhar com comunicação assincrona se deve aos benefícios que ele oferece, como gerenciamento de dados simplificado, cache das requisições e poder atuar com interface otimista.
+
+Como sugestão seria interessante aplicar testes end-to-end com ferramentas como Playwright ou Cypress para garantir a consistência e integridade das telas. Além de melhorar o SEO das páginas.
 
 ## Construído com
 
