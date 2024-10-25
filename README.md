@@ -49,11 +49,11 @@ Para construção de alguns componentes utilizei o padrão **Compound Component 
 
 Na paginação procurei atuar com o conceito de "infinite scroll", o hook `useInfiniteQuery()` do React Query permite manipular os dados e parâmetros da paginação de maneira simples.
 
-Criei custom hooks para separar a camada lógica do JSX, além de contar com o benefício de reaproveitamento do código.
+Criação de custom hooks para separar a camada lógica do JSX, além de contar com o benefício de reaproveitamento do código das chamadas HTTP.
 
 A escolha do React Query para trabalhar com comunicação assincrona se deve aos benefícios que ele oferece, como gerenciamento de dados simplificado, cache das requisições e poder atuar com interface otimista.
 
-Como sugestão seria interessante aplicar testes end-to-end com ferramentas como Playwright ou Cypress para garantir a consistência e integridade das telas. Além de melhorar o SEO das páginas.
+Por fim, atuei com o padrão `app router` para construção de rotas dinâmicas. Como sugestão seria interessante aplicar testes end-to-end com ferramentas como Playwright ou Cypress para garantir a consistência das telas e poder realizar testes de acessibilidade. Além, melhorar o SEO das páginas.
 
 ## Construído com
 
