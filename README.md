@@ -60,3 +60,7 @@ Por fim, atuei com o padrão `app router` para construção de rotas dinâmicas.
 - Next.js
 - Tailwind CSS
 - TanStack Query (React Query)
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.md](LICENSE) para obter detalhes.
